@@ -1,0 +1,28 @@
+<div class="container mt-2 ">
+    <h4 class="text-center text-bold">Cadastrar Novo Veículo</h4>
+    <form #formCar="ngForm">
+        <div class="row">
+            <label for="nome" class="form-label col-2">Nome:</label>
+            <div class="col">
+                <input type="text" class="form-control" [(ngModel)]="car.nome" name="nome" id="nome" required>
+            </div>
+        </div>
+        <div class="row mt-1">
+            <label for="montadora" class="form-label col-2">Montadora:</label>
+            <div class="col">
+                <input type="text" class="form-control" [(ngModel)]="car.montadora" name="montadora" id="montadora" required>
+            </div>
+        </div>
+        <div class="row mt-1">
+            <label for="preco" class="form-label col-2">Preço:</label>
+            <div class="col">
+                <input type="text" class="form-control" [(ngModel)]="car.preco" name="preco" id="preco" required>
+            </div>
+            <label for="ano" class="form-label col-2">Ano:</label>
+            <div class="col">
+                <input type="text" class="form-control" [(ngModel)]="car.ano" name="ano" id="ano" required>
+            </div>
+        </div>
+        <button class="btn btn-primary mt-2 mb-2" (click)="save()" [disabled]="formCar.invalid">Salvar</button>
+    </form>
+</div>
